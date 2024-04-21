@@ -6,7 +6,7 @@ const userSchema = new Schema(
     {
         username: {
             type: String,
-            required: true,
+             required: true,
             unique: true,
             lowecase: true,
             trim: true, 
@@ -14,24 +14,24 @@ const userSchema = new Schema(
         },
         email: {
             type: String,
-            required: true,
+             required: true,
             unique: true,
             lowecase: true,
             trim: true, 
         },
         fullName: {
             type: String,
-            required: true,
+             required: true,
             trim: true, 
             index: true
         },
-        avatar: {
-            type: String, // cloudinary url
-            required: true,
-        },
-        coverImage: {
-            type: String, // cloudinary url
-        },
+        // avatar: {
+        //     type: String, // cloudinary url
+        //     required: true,
+        // },
+        // coverImage: {
+        //     type: String, // cloudinary url
+        // },
         watchHistory: [
             {
                 type: Schema.Types.ObjectId,
@@ -40,7 +40,7 @@ const userSchema = new Schema(
         ],
         password: {
             type: String,
-            required: [true, 'Password is required']
+             required: [true, 'Password is required']
         },
         refreshToken: {
             type: String
